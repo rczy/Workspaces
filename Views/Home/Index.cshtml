@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <div class="row mt-5">
+        <div class="col"><select id="workspace" class="form-control" asp-items="ViewBag.Workspaces"></select></div>
+        <div class="col"><input id="date-from" class="form-control" type="date" /></div>
+        <div class="col"><input id="date-to" class="form-control" type="date" /></div>
+        <div class="col-md-2"><input id="list" class="form-control btn btn-success" type="button" value="List Assignments"/></div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div id="result"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+     <script type="text/javascript" src="~/js/assignments.js"></script>
+}
